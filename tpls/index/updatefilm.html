@@ -1,0 +1,20 @@
+<div ng-init="filmsInit()">
+    <div ng-repeat="item in films| filter:{'id':'0'}">
+        <a  ui-sref="{{item.href}}" ng-click="setActive(item)"><h4 class="text-error">{{item.title}}&nbsp;<small>更多...</small></h4></a> 
+        <!-- ui-sref="{{item.href}}" -->
+        <table class="table table-condensed table-hover"> 
+            <tbody>
+                <tr ng-repeat="i in item.list|limitTo:26">
+                    <td>
+                        <span class="glyphicon glyphicon-film" style="margin-top:3px"></span>
+                        <a ui-sref="{{item.href}}" title="{{i.title}}" target="_blank">
+                            {{i.title}}
+                            <!-- {{i.title|limitTo:23}<span ng-if="i.content.length>13">...</span>  -->
+                            <span class="text text-info pull-right">{{i.date}}</span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+   </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="jumbotron bck" ng-init="HeaderInit()">
+    <div class="container" style="padding-top:20px">
+        <div class="row-fluid">
+            <div class="col-md-5 col-sm-5">
+                <img src="img/logo.png" alt="logo">
+            </div>
+            <div class="col-md-7 col-sm-7 clearR">
+                <div class="clearR pull-right" style="padding-top:40px">
+                    <div>
+                        <span class="label label-danger">热门标签：</span>
+                        <a href="{{item.href}}" onclick="return false;" target="_blank"  class="badge badge-info" ng-repeat="item in labels">{{item.name}}</a>
+                    </div>
+                    <form class="form-inline" action="/search.jspx"  style="margin-top:3px">
+                        <div class="form-group">
+                            <input class="form-control" value="请输入关键词" type="text" onfocus="if(this.value=='请输入关键词')this.value=''" onblur="if(this.value=='')this.value='请输入关键词'" maxlength="50" autocomplete="off"/>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">所有消息 <span class="caret"></span></button>
+                                <ul class="dropdown-menu">
+                                        <!-- ui-sref="{{item.href}}" -->
+                                    <li><a href="{{item.href}}" ng-repeat="item in navList" onclick="return false;">{{item.name}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container" ng-controller="indexCtrl">
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <my-carousel></my-carousel>
+        </div>
+
+        <div class="col-md-3 col-sm-3">
+            <my-tablist></my-tablist>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div class="col-md-4 leftframe">
+               <day-recommend></day-recommend>
+            </div>
+            <div class="col-md-8 shadow-frame">
+                <update-film></update-film>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div ng-include="'tpls/index/collection.html'"></div>
+            <div ng-include="'tpls/index/canvas.html'"></div>
+        </div>
+    </div>
+    <type-film></type-film>
+</div>

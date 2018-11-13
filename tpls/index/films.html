@@ -1,0 +1,33 @@
+<div class="row" ng-init="filmsInit()">
+    <div class="col-md-6" ng-repeat="item in films|filter:{'id':'1'}">
+        <div class="shadow-frame">
+            <a ui-sref="{{item.href}}" ng-click="setActive(item)"><h4 class="text-error">{{item.title}}&nbsp;<small>更多...</small></h4></a>
+            <div class="row-fluid">
+                <a class="col-md-4 pull-left thumbnail" href="javascript:void(0)">
+                    <div style="height:150px;text-align:center;overflow:hidden;"> 
+                        <img  width="134" height="172" style="position: relative; top: -10px; display: inline;" ng-src="{{item.thumbnail.img}}" alt="{{item.thumbnail.title}}" /> 
+                    </div>
+                </a>
+                <div class="col-md-8">
+                    <a href="javascript:void(0)" title="{{item.thumbnail.title}}" target="_blank">
+                        <h5>{{item.thumbnail.content}}</h5>
+                        <span>{{item.thumbnail.size}}</span>
+                    </a>
+                </div>
+            </div>
+            <table class="table table-condensed table-hover">
+                <tbody>
+                    <tr ng-repeat="i in item.list|limitTo:10">
+                        <td>
+                            <span class="glyphicon glyphicon-film" style="margin-top:3px"></span>
+                            <a href="javascript:void(0)" title="{{i.title}}" target="_blank">
+                                {{i.title}}
+                                <span class="text text-info pull-right">{{i.date}}</span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>      
+        </div>
+    </div> 
+</div>

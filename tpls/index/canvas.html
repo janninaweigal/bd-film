@@ -1,0 +1,29 @@
+<div class="shadow-frame" id="myCanvasContainer">
+    <h4 class="text-error">电影类别</h4> 
+    <div class="canvas-box">
+        <canvas width="200" height="200" id="myCanvas"> 
+            <a href="javascript:void(0)" target="_blank"> 剧情[9477] </a> 
+            <a href="javascript:void(0)" target="_blank"> 喜剧[5837] </a> 
+            <a href="javascript:void(0)" target="_blank"> 动作[4794] </a> 
+            <a href="javascript:void(0)" target="_blank"> 惊悚[4433] </a> 
+            <a href="javascript:void(0)" target="_blank"> 爱情[3472] </a> 
+            <a href="javascript:void(0)" target="_blank"> 犯罪[2319] </a> 
+            <a href="javascript:void(0)" target="_blank"> 冒险[2102] </a> 
+            <a href="javascript:void(0)" target="_blank"> 恐怖[2076] </a> 
+            <a href="javascript:void(0)" target="_blank"> 科幻[1519] </a> 
+            <a href="javascript:void(0)" target="_blank"> 动画[1288] </a> 
+        </canvas> 
+    </div>
+</div>
+
+<script>
+     //电影类别
+     if (!$('#myCanvas').tagcanvas({
+        textColour : 'black',
+        outlineThickness : 1,
+        maxSpeed : 0.03,
+        depth : 0.75
+    })) {
+        $('#myCanvasContainer').hide();
+    }
+</script>

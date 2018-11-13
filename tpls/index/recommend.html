@@ -1,0 +1,11 @@
+ <div class="shadow-frame" ng-init="recommendInit()">
+    <div ng-repeat="item in recommends">
+        <h4 class="text-error">{{item.title}}</h4>
+        <a href="javascript:void(0)" title="{{i.content}}" target="_blank" class="thumbnail" ng-repeat="i in item.thumbnails">
+            <div class="thumbbox">
+                <img width="196" height="246" ng-src="{{i.img}}" alt="{{i.title}}" style="position: relative; top: -20px; display: inline;"> 
+            </div>
+            <h6>{{i.content}}</h6>
+        </a>
+    </div>
+</div> 

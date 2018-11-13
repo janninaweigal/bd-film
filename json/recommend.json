@@ -1,0 +1,27 @@
+[
+    {
+        "title":"今日推荐",
+        "thumbnails":[
+            {
+                "title":"王牌特工",
+                "img":"img/wptg.jpg",
+                "content":"2017高分喜剧动作《王牌特工2：黄金圈》无删减版.HD720P.中英双字"
+            },
+            {
+                "title":"全球风暴",
+                "img":"img/qqfb.jpg",
+                "content":"2017科幻灾难《全球风暴》HD720P.韩版.中英双字"
+            },
+            {
+                "title":"天才枪手",
+                "img":"img/tcqs.jpg",
+                "content":"2017高分犯罪悬疑《天才枪手》HD1080P.泰语中字"
+            },
+            {
+                "title":"星际特工",
+                "img":"img/xjtg.jpg",
+                "content":"2017吕克贝松科幻冒险《星际特工：千星之城》HD1080P.国英双语.中字"
+            }
+        ]
+    }
+]

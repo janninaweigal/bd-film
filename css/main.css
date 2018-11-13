@@ -1,0 +1,152 @@
+﻿/*公共样式*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-weight: bold;
+    line-height: 20px;
+}
+.bck{background: url("../img/bck.png") repeat center center;}
+.bck img:hover{
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+.text-error {
+    color: #b94a48;
+}
+.shadow-frame{
+    margin-bottom: 15px;
+    background-color: #FFF;
+    border: 10px solid #FFF;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.leftframe{
+    padding:0px 20px 0px 0px;
+}
+a:hover:not(.btn), a:active:not(.btn), a:focus:not(.btn) {
+    color: #9E0000;
+    text-decoration: none;
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    transform: translateY(-3px);
+}
+/*导航*/
+ul.navbar-nav li:hover{
+    background-color: #cccccc;
+}
+ul.navbar-nav li:hover span{
+    color:#000;
+}
+.navActive{
+    background-color: #345e8c;
+}
+.navActive span{
+    color:#fff;
+}
+/*轮播图*/
+.carousel-indicators {
+    bottom:0px;
+}
+.carousel-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    background: #333;
+    background: rgba(0,0,0,0.75);
+}
+.carousel-caption h4,.carousel-caption p {
+    text-align:left;
+}
+.carousel-caption h4 {
+    color:#337ab7;
+}
+/*缩略图*/
+.thumbbox{
+    height: 150px;overflow: hidden;text-align: center;
+}
+.thumbbox+h6{
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+    text-align: center;
+}
+/*列表超出隐藏省略号*/
+.list-group-item{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+/*云标签*/
+.canvas-box{
+    width:100%;text-align:center;
+}
+/*页脚*/
+.footer{
+    padding: 40px 20px;
+    color: #C0E1FF;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
+    background: #325B87;
+}
+.footer img{
+    margin-right:5px;
+}
+@media (max-width: 975px ){
+    .leftframe{
+        display:none;
+    }
+    .jumbotron .clearR{
+        width:100%;
+        float: left!important;
+    }
+}
+/*向上箭头*/
+.xiangshang{
+    width:48px;
+    height: 43px;
+    display: block;
+    background: url("../img/fanhui.png") no-repeat;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+}
+.xiangshang:hover{
+    background: url("../img/fanhui1.png") no-repeat;
+}
+
+.xiaoshou li a{
+    cursor:pointer;
+}
+.xiaoshou li a:hover{
+    color: red;
+}
+
+/*分享到*/
+.share{
+    width: 100px;
+    height: 180px;
+    background: #fff;
+    position: fixed;
+    left:-100px;
+    top: 300px;
+    border: 1px solid #cccccc;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+.share span{
+    font-size: 18px;
+    color: #ffffff;
+    position: absolute; width: 25px;
+    height: 80px; line-height: 25px; background: #457CE6;  right: -25px; top:50px;
+    border: 1px solid #457CE6;
+    border-radius: 4px;
+}
+.share button{
+    margin-top: 10px;
+    width: 78px;
+}

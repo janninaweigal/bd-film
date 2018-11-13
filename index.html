@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="rootApp">
+<head>
+    <meta charset="UTF-8">
+    <title>集影网</title>
+    <!--引框架-->
+    <script src="framework/jquery.min.js"></script>
+    <script src="framework/jquery.tagcanvas.min.js"></script>
+    <script src="framework/bootstrap.min.js"></script>
+    <script src="framework/angular.min.js"></script>
+    <script src="framework/angular-ui-router.js"></script>
+    <!--by myself-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+</head>
+<body>
+    
+    <div ng-controller="headerCtrl">
+        <!--<div my-nav></div>-->
+        <my-nav></my-nav>
+        <!--<div my-header></div>-->
+        <my-header></my-header>
+    </div>
+    <!--主体内容-->
+    <div ui-view></div>
+    <!--footer-->
+    <div ng-controller="footerCtrl">
+        <my-footer></my-footer>
+    </div>
+    
+    <!--返回顶部-->
+    <div class="xiangshang" id="xiangshang" title="返回顶部"></div>
+    <!--分享到-->
+    <div id="share" class="share">
+        <button type="button" class="btn btn-default btn-xs"><img src="img/QQkongjian.png" alt=""/>QQ空间</button>
+        <button type="button" class="btn btn-default btn-xs"><img src="img/weibo.png" alt=""/>腾讯微博</button>
+        <button type="button" class="btn btn-default btn-xs"><img src="img/baidutieba.png" alt=""/>百度贴吧</button>
+        <button type="button" class="btn btn-default btn-xs"><img src="img/QQhaoyou.png" alt=""/>QQ好友</button>
+        <button type="button" class="btn btn-default btn-xs"><img src="img/wx1.png" alt=""/>微信</button>
+        <span>分享到</span>
+    </div>
+    <!--登陆注册-->
+    <div ng-controller="loginCtrl">
+        <div ng-include="'tpls/login.html'"></div>
+        <div ng-include="'tpls/register.html'"></div>
+    </div>
+</body>
+</html>

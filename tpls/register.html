@@ -1,0 +1,76 @@
+<div id="mymodal1" class="modal fade"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center">用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" name="registerForm">
+                    <div class="form-group" ng-class="{'has-success' : registerForm.uname.$dirty && registerForm.uname.$valid,
+                    'has-error' : registerForm.uname.$dirty && registerForm.uname.$invalid }">
+                        <label for="uname">用户名</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                            <input type="text" ng-model="uname" class="form-control" id="uname" name="uname" placeholder="请输入用户名" autocomplete="off" ng-pattern="/^[a-zA-Z]{1}/" ng-required="true" ng-minlength="5" ng-maxlength="10"/>
+                        </div>
+                        <div ng-show="registerForm.uname.$error.maxlength" class="alert alert-danger help-block">
+                            用户名长度不能超过10位
+                        </div>
+                        <div ng-show="registerForm.uname.$error.minlength" class="alert alert-danger help-block">
+                            用户名长度不能小于5位
+                        </div>
+                        <div ng-show="registerForm.uname.$error.pattern" class="alert alert-danger help-block">
+                            用户名必须以英文字母开始
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-success' : registerForm.upass.$dirty && registerForm.upass.$valid,
+                    'has-error' : registerForm.upass.$dirty && registerForm.upass.$invalid }">
+                        <label for="uPass">密码</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            <input type="password" ng-model="upass" class="form-control" id="upass" name="upass" autocomplete="off" placeholder="请输入密码" ng-required="true" ng-minlength="5" ng-maxlength="10"/>
+                        </div>
+                        <div ng-show="registerForm.upass.$error.maxlength" class="alert alert-danger help-block">
+                            密码长度不能超过10位
+                        </div>
+                        <div ng-show="registerForm.upass.$error.minlength" class="alert alert-danger help-block">
+                            密码长度不能小于5位
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-success' : registerForm.passConfirm.$dirty && upass==passConfirm,
+                    'has-error' : registerForm.passConfirm.$dirty && upass!==passConfirm}">
+                        <label for="passConfirm">确认密码</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            <input type="password" ng-model="passConfirm" class="form-control" id="passConfirm" name="passConfirm" autocomplete="off" placeholder="请再次输入密码" ng-required="true"/>
+                        </div>
+                        <div ng-show="registerForm.upass.$dirty&&registerForm.passConfirm.$dirty&&upass!==passConfirm" class="alert alert-danger help-block">
+                            密码和确认密码不一致
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-success' : registerForm.email.$dirty && registerForm.email.$valid,
+                    'has-error' : registerForm.email.$dirty && registerForm.email.$invalid }">
+                        <label for="email">邮箱</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-envelope"></span></span>
+                            <input type="email" ng-model="email" class="form-control" id="email" name="email" autocomplete="off" placeholder="请输入邮箱" ng-required="true" ng-minlength="5" ng-maxlength="30"/>
+                        </div>
+                        <div ng-show="registerForm.email.$error.maxlength" class="alert alert-danger help-block">
+                            密码长度不能超过30位
+                        </div>
+                        <div ng-show="registerForm.email.$error.minlength" class="alert alert-danger help-block">
+                            密码长度不能小于5位
+                        </div>
+                        <div ng-show="registerForm.email.$error.email" class="alert alert-danger help-block">
+                            邮箱格式不正确
+                        </div>
+                    </div>
+                    <div class="form-button-group">
+                        <button type="button" class="btn btn-primary btn-block" id="register" ng-disabled='!registerForm.$valid' ng-click="myRegister()">注册</button>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

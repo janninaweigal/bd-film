@@ -1,0 +1,16 @@
+<div class="footer">
+    <div class="container" ng-init="footersInit()">
+        <div class="row-fluid" ng-repeat="item in footers">
+            <div class="col-md-5 col-sm-6 col-xs-12">
+                <h4>{{item.left.title}}</h4>
+                <a ng-repeat="i in item.left.study" href="{{i.href}}" style="color:#fff;">{{i.name}}&nbsp;</a>
+                <br/>
+                <span ng-repeat="j in item.left.contact">{{j.way}}&nbsp;</span>
+            </div>
+            <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
+                <h4>{{item.right.title}}</h4>
+                <img ng-src="{{q.src}}" width="150" height="150" alt="{{q.name}}" ng-repeat="q in item.right.images"/>
+            </div>
+        </div>
+    </div>
+</div>

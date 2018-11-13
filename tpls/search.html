@@ -1,0 +1,19 @@
+<div ng-init="filmInit()"  class="shadow-frame">
+    <a href="javascript:void(0)"><h3 class="text-error">{{allfilm.title}}</h3></a> 
+    <table class="table table-condensed table-hover"> 
+        <tbody>
+            <tr ng-repeat="i in items">
+                <td>
+                    <span class="glyphicon glyphicon-th-large" style="margin-top:3px"></span>
+                    <a href="tpls/play.html" title="{{i.title}}" target="_blank">
+                        {{i.title}}
+                        <!-- {{i.title|limitTo:23}<span ng-if="i.content.length>13">...</span>  -->
+                        <span class="text text-info pull-right">{{i.date}}</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <newest-divide></newest-divide> -->
+    <div ng-include="'tpls/divide.html'"></div>
+</div>

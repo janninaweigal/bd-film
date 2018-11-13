@@ -1,0 +1,29 @@
+﻿<div ng-init="tabListInit()">
+    <!--tablist start-->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="text-error"><h4>点击排行&nbsp;</h4></li>
+        <li ng-class="{true:'active'}[$first]" ng-repeat="item in tabList">
+            <a href="{{'#'+item.id}}" onClick="return false;" data-toggle="tab">{{item.name}}</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes start -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane" id="{{tab.id}}" ng-repeat="tab in tabList" ng-class="{true:'active'}[$first]">
+            <div class="list-group">
+                <a href="javascript:void(0)" class="list-group-item" title="{{i.content}}" ng-repeat="i in tab.list">
+                    <span ng-switch on="{{i.num}}">
+                        <span class="badge pull-left" ng-switch-when="1" style="background-color:#FF858E;">&nbsp;{{i.num}}&nbsp;&nbsp;</span>
+                        <span class="badge pull-left" ng-switch-when="2" style="background-color:#77D549;">&nbsp;{{i.num}}&nbsp;&nbsp;</span>
+                        <span class="badge pull-left" ng-switch-when="3" style="background-color:#62C1FF;">&nbsp;{{i.num}}&nbsp;&nbsp;</span>
+                        <span class="badge pull-left" ng-switch-default style="background-color:#979598;">&nbsp;{{i.num}}&nbsp;&nbsp;</span>
+                    </span>
+                    {{i.content}}
+                    <!-- {{i.content|limitTo:13}}<span ng-if="i.content.length>13">...</span> -->
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end Tab panes -->
+    <!--end tablist-->
+</div>
